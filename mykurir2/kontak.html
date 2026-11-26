@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyKurir | Input Paket</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="layout">
+
+    <aside class="sidebar">
+        <a href="index.html" class="brand">
+            <span class="brand-logo">M</span>
+            <span><b>MyKurir</b><small>Courier Management</small></span>
+        </a>
+
+        <p class="menu-title">MENU UTAMA</p>
+        <nav class="menu">
+            <a class="menu-link" href="index.html">▦ Dashboard</a>
+            <a class="menu-link" href="informasi.html">▤ Informasi Paket</a>
+            <a class="menu-link" href="detail.html">⇄ Detail Pengiriman</a>
+            <a class="menu-link active" href="kontak.html">＋ Input Paket</a>
+        </nav>
+
+        <div class="sidebar-user">
+            <div class="avatar">A</div>
+            <div><b>Admin MyKurir</b><small>Administrator</small></div>
+        </div>
+    </aside>
+
+    <main class="main">
+        <header class="topbar">
+            <div>
+                <h1>Input Paket</h1>
+                <p>Masukkan data pengiriman paket baru.</p>
+            </div>
+            <span class="date-text">26 November 2026</span>
+        </header>
+
+        <section class="page-banner">
+            <h2>Formulir Pengiriman Paket</h2>
+            <p>Lengkapi informasi pengirim, penerima, dan detail paket dengan benar.</p>
+        </section>
+
+        <section class="content-card">
+            <form>
+                <h2 class="form-heading">1. Informasi Pengirim</h2>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="sender">Nama Pengirim</label>
+                        <input id="sender" type="text" placeholder="Nama lengkap" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="senderPhone">Nomor HP Pengirim</label>
+                        <input id="senderPhone" type="tel" placeholder="08xxxxxxxxxx" required>
+                    </div>
+
+                    <div class="form-group full">
+                        <label for="senderAddress">Alamat Pengirim</label>
+                        <textarea id="senderAddress" placeholder="Alamat lengkap pengirim" required></textarea>
+                    </div>
+                </div>
+
+                <h2 class="form-heading">2. Informasi Penerima</h2>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="receiver">Nama Penerima</label>
+                        <input id="receiver" type="text" placeholder="Nama lengkap" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="receiverPhone">Nomor HP Penerima</label>
+                        <input id="receiverPhone" type="tel" placeholder="08xxxxxxxxxx" required>
+                    </div>
+
+                    <div class="form-group full">
+                        <label for="receiverAddress">Alamat Penerima</label>
+                        <textarea id="receiverAddress" placeholder="Alamat lengkap penerima" required></textarea>
+                    </div>
+                </div>
+
+                <h2 class="form-heading">3. Detail Paket</h2>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="packageType">Jenis Paket</label>
+                        <select id="packageType" required>
+                            <option value="">Pilih jenis paket</option>
+                            <option>Dokumen</option>
+                            <option>Barang</option>
+                            <option>Makanan</option>
+                            <option>Lainnya</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="weight">Berat Paket (kg)</label>
+                        <input id="weight" type="number" min="0.1" step="0.1" placeholder="Contoh: 2" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service">Layanan Pengiriman</label>
+                        <select id="service" required>
+                            <option value="">Pilih layanan</option>
+                            <option>Reguler</option>
+                            <option>Express</option>
+                            <option>Same Day</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notes">Catatan (Opsional)</label>
+                        <input id="notes" type="text" placeholder="Catatan tambahan">
+                    </div>
+                </div>
+
+                <div class="price-preview">
+                    <div>
+                        <b>Estimasi Biaya Pengiriman</b>
+                        <small>Perkiraan berdasarkan berat dan layanan.</small>
+                    </div>
+                    <strong>Rp0</strong>
+                </div>
+
+                <div class="form-actions">
+                    <button type="reset" class="btn btn-light">Reset Form</button>
+                    <button type="button" class="btn btn-orange">Simpan Paket</button>
+                </div>
+            </form>
+        </section>
+
+        <footer>© 2026 MyKurir — Sistem Informasi Pengiriman Paket</footer>
+    </main>
+</div>
+</body>
+</html>
